@@ -44,3 +44,4 @@ The image at the bottom of this article is just a wireframe, your application sh
   <figcaption>MovieCard</figcaption>
   <img src="./src/assets/movie-component.png" style="padding: 1rem; width: 400px">
 </div>
+# exercise-react-movie-card
