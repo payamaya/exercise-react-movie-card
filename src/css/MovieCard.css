@@ -1,0 +1,32 @@
+.title {
+  border: var(--input);
+}
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  flex-direction: column;
+  height: auto;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  align-items: center;
+  justify-content: space-around;
+  margin: 1rem;
+  padding: 0.4rem;
+  border: var(--border);
+  border-radius: var(--borderRadius);
+}
+.card-title {
+  display: flex;
+  justify-content: space-between;
+  /* border: 2px solid red; */
+  width: 100%;
+  flex-direction: row;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+.genre {
+  display: flex;
+  width: 100%;
+  /* align-items: start; */
+  justify-content: flex-end;
+}

@@ -1,0 +1,52 @@
+.add-movie {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  width: 300px;
+  padding: 3rem;
+  border: var(--border);
+}
+.input-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  /* width: 200px; */
+}
+.rating-section {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.range-section {
+  display: flex;
+  /* border: 2px solid red; */
+  align-items: center;
+}
+.range-section span {
+  padding-top: 1rem;
+}
+.range {
+  margin-inline: 1rem;
+}
+.select-section {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.select {
+  padding: 0.3rem 2rem;
+}
+.text-area {
+  margin-top: 1rem;
+  display: flex;
+  /* border: red 2px solid; */
+}
+.btn-section {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-left: 6rem;
+}
+.btn {
+  margin-top: 2rem;
+  font-size: 1rem;
+  padding: 0.2rem 1rem;
+}
