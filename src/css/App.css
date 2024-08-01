@@ -4,19 +4,36 @@
 }
 body {
   height: 100%;
+  background: rgb(237, 243, 250);
   font-family: 'Roboto Condensed', sans-serif;
 }
 html {
   --border: 2px solid rgb(22, 22, 22);
   --borderRadius: 4px;
   --button-outline: none;
-  --input-caret-color: rgb(28, 194, 9);
+  --input-caret-color: rgb(0, 66, 153);
   --input-transition: border-color 0.3s, background-color 0.3s, color 0.3s;
-  --range-focus-background: rgb(195, 27, 27);
+
+  --inputBg: rgb(211, 229, 252);
+}
+img {
+  display: block;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 h1 {
+  font-size: 2rem;
   padding-block: 1rem;
 }
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.2rem;
+}
+
 input,
 select {
   border: var(--border);
@@ -47,14 +64,17 @@ span {
 input,
 textarea {
   caret-color: var(--input-caret-color);
+  font-weight: bolder;
+  font-size: 1rem;
   transition: var(--input-transition);
 }
 input:focus,
 textarea:focus {
   outline: none;
-  background-color: rgb(184, 184, 184);
+  background-color: var(--inputBg);
 }
-input[type='range']:focus {
-  background-color: var(--range-focus-background);
+input[type='range']:focus,
+select:focus {
+  background-color: var(--inputBg);
   outline: none;
 }

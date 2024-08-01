@@ -3,6 +3,7 @@ export interface IAddMovie {
   rating: number
   select: string
   textarea: string
+  image: File | null // Add image field
 }
 
 export interface IOption {

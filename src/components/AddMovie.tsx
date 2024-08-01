@@ -11,57 +11,43 @@ export function AddMovie({ addMovies }: AddMovieProps) {
   // const [max] = useState<number>(5)
   const [select, setSelect] = useState<string>('drama')
   const [textarea, setTextArea] = useState('')
+  const [image, setImage] = useState<File | null>(null)
 
   const handleTitle: ChangeEventHandler<HTMLInputElement> = (e) => {
-    console.log('Title:', title)
     setTitle(e.target.value)
   }
   const handleRange: ChangeEventHandler<HTMLInputElement> = (e) => {
-    console.log('Range:', range)
     setRange(parseInt(e.target.value))
   }
-  // const handleMinRange: ChangeEventHandler<HTMLInputElement> = (e) => {
-  //   setMin(parseInt(e.target.value))
-  // }
-  // const handleMaxRange: ChangeEventHandler<HTMLInputElement> = (e) => {
-  //   setMax(parseInt(e.target.value))
-  // }
   const handleSelect: ChangeEventHandler<HTMLSelectElement> = (e) => {
-    console.log('Select:', select)
     setSelect(e.target.value)
   }
   const handleTextArea: ChangeEventHandler<HTMLTextAreaElement> = (e) => {
-    console.log('TextArea:', textarea)
     setTextArea(e.target.value)
+  }
+  const handleImage: ChangeEventHandler<HTMLInputElement> = (e) => {
+    if (e.target.files) {
+      setImage(e.target.files[0])
+    }
   }
   const handleClear = () => {
     setTitle('')
     setRange(1)
     setTextArea('')
     setSelect('drama')
-    console.log('Cleared:', title, range, select, textarea)
+    setImage(null)
   }
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault()
-    // setTitle(title)
-    // setRange(range)
-    // setSelect(select)
-    // setTextArea(textarea)
-
-    // console.log('Title:', title)
-    // console.log('range:', range)
-    // console.log('select:', select)
-    // console.log('textarea:', textarea)
     const newMovie: IAddMovie = {
       title,
       rating: range,
       select,
       textarea,
+      image,
     }
     addMovies(newMovie)
     handleClear()
-
-    // console.log('All:', title, range, select, textarea)
   }
 
   const options: IOption[] = [
@@ -117,6 +103,10 @@ export function AddMovie({ addMovies }: AddMovieProps) {
             </option>
           ))}
         </select>
+      </section>
+      <section className='select-section'>
+        <label htmlFor='image'>Upload Image</label>
+        <input type='file' id='image' accept='image/*' onChange={handleImage} />
       </section>
       <section className='text-area'>
         <label htmlFor='description'>Description</label>
