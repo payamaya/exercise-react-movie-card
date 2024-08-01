@@ -36,6 +36,16 @@
 .select {
   padding: 0.3rem 2rem;
 }
+.select:focus {
+  background: red;
+}
+.select:focus-visible {
+  background-color: var(--input-color);
+  color: var(--textColor);
+}
+.select:first-of-type {
+  padding: 0.3rem 0rem;
+}
 .text-area {
   margin-top: 1rem;
   display: flex;
@@ -48,11 +58,10 @@
   padding-left: 6rem;
 }
 .btn {
-  margin-top: 2rem;
   font-size: 1rem;
-  padding: 0.2rem 1rem;
+  padding: 0.3rem 1rem;
 }
 .btn:hover {
   background-color: var(--input-color);
-  color: var(--input-background-color);
+  color: var(--textColor);
 }

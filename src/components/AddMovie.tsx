@@ -1,6 +1,8 @@
 import { ChangeEventHandler, useState } from 'react'
 import { IAddMovie, IOption } from '../interfaces'
 import '../css/AddMovie.css'
+
+import { ReusableButton } from './ReusableButton'
 interface AddMovieProps {
   addMovies: (movie: IAddMovie) => void
 }
@@ -89,7 +91,7 @@ export function AddMovie({ addMovies }: AddMovieProps) {
         <select
           className='select'
           name='film'
-          id='film'
+          id='genre'
           onChange={handleSelect}
           required
           value={select}
@@ -105,7 +107,9 @@ export function AddMovie({ addMovies }: AddMovieProps) {
         </select>
       </section>
       <section className='select-section'>
-        <label htmlFor='image'>Upload Image</label>
+        <label htmlFor='image' className='custom-file-upload'>
+          Upload Image
+        </label>
         <input type='file' id='image' accept='image/*' onChange={handleImage} />
       </section>
       <section className='text-area'>
@@ -119,12 +123,18 @@ export function AddMovie({ addMovies }: AddMovieProps) {
         ></textarea>
       </section>
       <section className='btn-section'>
-        <button className='btn' type='reset' onClick={handleClear}>
+        {/* <button className='btn' type='reset' onClick={handleClear}>
           Clear
         </button>
         <button className='btn' type='submit'>
           Add
-        </button>
+        </button> */}
+        <ReusableButton onClick={handleClear} type='reset' className='btn'>
+          Clear
+        </ReusableButton>
+        <ReusableButton className='btn' type='submit'>
+          Add
+        </ReusableButton>
       </section>
     </form>
   )

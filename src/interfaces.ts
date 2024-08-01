@@ -11,3 +11,10 @@ export interface IOption {
   value: string
   id: number
 }
+
+// export interface IButton {
+//   onClick?: () => void
+//   type?: 'submit' | 'reset' | 'button'
+//   className: string
+//   chidren: React.ReactNode
+// }
