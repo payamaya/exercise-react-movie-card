@@ -1,6 +1,6 @@
 import { ReactElement } from 'react'
 import { IAddMovie } from '../interfaces'
-import '../css/MovieCard.css'
+
 interface IAddMovieProps {
   movie: IAddMovie
 }

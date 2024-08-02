@@ -1,6 +1,5 @@
 import { ChangeEventHandler, useState } from 'react'
 import { IAddMovie, IOption } from '../interfaces'
-import '../css/AddMovie.css'
 
 import { ReusableButton } from './ReusableButton'
 interface AddMovieProps {

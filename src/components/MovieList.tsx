@@ -3,7 +3,6 @@ import { AddMovie } from './AddMovie'
 import { MovieCard } from './MovieCard'
 import { IAddMovie } from '../interfaces'
 
-import '../css/MovieList.css'
 export function MovieList() {
   const [movies, setMovies] = useState<IAddMovie[]>([])
 
